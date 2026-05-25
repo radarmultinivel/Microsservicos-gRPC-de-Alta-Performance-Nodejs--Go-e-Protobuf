@@ -1,0 +1,22 @@
+{
+  "name": "service-gateway-node",
+  "version": "1.0.0",
+  "description": "Gateway gRPC poliglota - Node.js + TypeScript",
+  "author": "L. A. Leandro <laleandro@example.com>",
+  "type": "module",
+  "scripts": {
+    "client": "tsx src/client.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.12.0",
+    "@grpc/proto-loader": "^0.7.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

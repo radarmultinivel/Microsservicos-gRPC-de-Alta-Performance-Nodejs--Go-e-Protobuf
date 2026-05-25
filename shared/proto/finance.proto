@@ -1,0 +1,27 @@
+// Desenvolvido por L. A. Leandro
+// São José dos Campos - SP
+// Data: 25/05/2026
+
+syntax = "proto3";
+
+package finance;
+
+option go_package = "github.com/polyglot-grpc/service-processor-go/pb;pb";
+
+service TransactionEvaluator {
+  rpc AuditTransaction (TransactionRequest) returns (TransactionResponse);
+}
+
+message TransactionRequest {
+  string transaction_id = 1;
+  string organization_cnpj = 2;
+  double monetary_value = 3;
+  string encrypted_payload = 4;
+}
+
+message TransactionResponse {
+  string transaction_id = 1;
+  bool is_approved = 2;
+  string compliance_status = 3;
+  int64 latency_microseconds = 4;
+}
